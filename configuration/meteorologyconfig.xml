@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:p="http://www.springframework.org/schema/p" 
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		">
+
+	<bean id="relativetime" class="com.meli.meteorologiagalactica.time.RelativeTime"/>
+	
+	
+
+	<bean id="vulcano" p:name="vulcano" class="com.meli.meteorologiagalactica.Planet"
+		p:degreePerDay="5" p:distanceToSun="1000" p:clockwise="false"
+		 />
+
+
+	<bean id="betasoide"  p:name="betasoide" class="com.meli.meteorologiagalactica.Planet"
+		p:degreePerDay="3" p:distanceToSun="2000" p:clockwise="true"
+		 />
+
+	<bean id="ferengi"  p:name="ferengi" class="com.meli.meteorologiagalactica.Planet"
+		p:degreePerDay="1" p:distanceToSun="500" p:clockwise="true" 
+		 />
+		
+	<bean id="galaxy" class="com.meli.meteorologiagalactica.Galaxy" >
+	 <property name="planets">
+	 	<list>
+	 	<ref bean="vulcano"/>
+	 	<ref bean="betasoide"/>
+	 	<ref bean="ferengi"/>
+	 	</list>
+	 </property>
+	</bean>
+	<bean id="perimeterAlgorithm" class="com.meli.meteorologiagalactica.algorithms.TrianglePerimeterAlgorithm"/>
+	
+	<bean id="pointInsidePolygonAlgorithm" class="com.meli.meteorologiagalactica.algorithms.ThreePointOrientationAlgorithm"/>
+</beans>		
