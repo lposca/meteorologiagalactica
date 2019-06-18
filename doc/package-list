@@ -1,0 +1,11 @@
+com.meli.meteorologiagalactica
+com.meli.meteorologiagalactica.algorithms
+com.meli.meteorologiagalactica.constants
+com.meli.meteorologiagalactica.dao
+com.meli.meteorologiagalactica.job
+com.meli.meteorologiagalactica.model
+com.meli.meteorologiagalactica.model.controller
+com.meli.meteorologiagalactica.restservice
+com.meli.meteorologiagalactica.restservice.model
+com.meli.meteorologiagalactica.service
+com.meli.meteorologiagalactica.time
